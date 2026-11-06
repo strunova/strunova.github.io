@@ -22,7 +22,18 @@
       <p class="lead">
         A desktop application for finding, exploring and identifying guitar chords.
       </p>
-      <p class="status">In development · alpha · not available for download yet</p>
+      <div class="hero-actions">
+        <a class="button" href="download/STRUNOVA_0.1.0_amd64.deb" download
+          >Download alpha 0.1.0 for Linux</a
+        >
+        <p class="hero-note">
+          Early alpha: the interface only, without the chord library yet.
+        </p>
+        <p class="hero-note">
+          Debian 13 · .deb · 1.9 MB · <a href="#download">How to install</a> · By
+          downloading, you agree to the <a href="terms.html">Terms of Use</a>.
+        </p>
+      </div>
     </header>
 
     <main>
@@ -72,17 +83,51 @@
         </p>
       </section>
 
-      <section>
-        <h2>Platforms</h2>
+      <section id="download" class="download">
+        <h2>Download</h2>
         <p>
-          Being developed on Linux (Debian 13). A Windows version is planned. Download links
-          will appear here only after a version has been built and tested.
+          STRUNOVA 0.1.0 is an early alpha. It contains the interface and the navigation
+          between sections. The chord library and the other features above are not
+          available yet.
         </p>
+
+        <div class="download-card">
+          <a class="button" href="download/STRUNOVA_0.1.0_amd64.deb" download
+            >Download for Linux (.deb)</a
+          >
+          <p class="file-info">
+            Version 0.1.0 alpha · Debian package · 64-bit (x86-64) · 1.9 MB
+          </p>
+          <p class="file-info">
+            By downloading, you agree to the <a href="terms.html">Terms of Use</a>.
+          </p>
+        </div>
+
+        <h3>Install</h3>
+        <p>
+          Open the downloaded file. The Software app opens: click <strong>Install</strong>
+          and enter your password. STRUNOVA then appears in your application menu. Made
+          for Debian 13 (64-bit).
+        </p>
+        <p class="small">Or, in a terminal, in the folder where you saved the file:</p>
+        <pre><code>sudo apt install ./STRUNOVA_0.1.0_amd64.deb</code></pre>
+        <p class="small">
+          To remove STRUNOVA, uninstall it from the Software app, or run
+          <code>sudo apt remove strunova</code>.
+        </p>
+        <p class="small">
+          Other Linux distributions based on Debian may work, but they have not been
+          tested. A Windows version is planned.
+        </p>
+        <p class="small">SHA-256: <code class="checksum">2c770bbd91054fd160b028ddf1b7ce7eb245869fd1d99aa27f754829b1392c4a</code></p>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 themasterofbuttons. All rights reserved.</p>
+      <p>
+        © 2026 themasterofbuttons. All rights reserved. ·
+        <a href="terms.html">Terms of Use</a>
+      </p>
     </footer>
   </body>
 </html>
