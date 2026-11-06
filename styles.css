@@ -6,7 +6,7 @@
   --color-text: #ffffff;
   --color-text-muted: #aab8c5;
   /* Warnings only */
-  --color-danger: #ff6b6b;
+  --color-danger: #ff4d4d;
   color-scheme: dark;
 }
 
@@ -135,9 +135,9 @@ html {
   max-width: 40rem;
   margin: 2rem auto 0;
   padding: 1rem 1.25rem;
-  border: 1px solid var(--color-danger);
+  border: 2px solid var(--color-danger);
   border-radius: 0.75rem;
-  background-color: color-mix(in srgb, var(--color-danger) 10%, transparent);
+  background-color: color-mix(in srgb, var(--color-danger) 15%, transparent);
   text-align: left;
 }
 
