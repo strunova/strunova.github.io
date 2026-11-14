@@ -728,6 +728,12 @@ section {
   color: var(--accent);
 }
 
+/* The copy buttons need the script; without it the text is still there to
+   select by hand. */
+html:not(.js) .copy {
+  display: none;
+}
+
 /* What's new */
 
 .release {
@@ -924,5 +930,13 @@ footer a {
   .button {
     padding: 0 1rem;
     font-size: 0.9375rem;
+  }
+}
+
+/* A printed page shows every section, even those not yet scrolled to. */
+@media print {
+  .js .reveal:not(.is-visible) {
+    opacity: 1;
+    translate: none;
   }
 }

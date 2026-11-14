@@ -35,20 +35,49 @@ if (reduced || !("IntersectionObserver" in window)) {
   }
 }
 
+// Copies the text, or says why not. The clipboard may be missing (a page not
+// served over HTTPS) or refused by the browser.
+const copy = async (text) => {
+  if (navigator.clipboard === undefined) {
+    return false;
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+// Selects the text on the page, so it can be copied with Ctrl+C.
+const select = (element) => {
+  const range = document.createRange();
+  range.selectNodeContents(element);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+};
+
 for (const button of document.querySelectorAll("[data-copy]")) {
-  button.addEventListener("click", () => {
+  // The label is read once: a second click while “Copied” shows must not make
+  // “Copied” the label to come back to.
+  const label = button.textContent;
+  let timer;
+  button.addEventListener("click", async () => {
     const target = document.getElementById(button.dataset.copy);
-    if (target === null || navigator.clipboard === undefined) {
+    if (target === null) {
       return;
     }
-    navigator.clipboard.writeText(target.textContent.trim()).then(() => {
-      const label = button.textContent;
-      button.dataset.copied = "true";
-      button.textContent = "Copied";
-      setTimeout(() => {
-        button.dataset.copied = "false";
-        button.textContent = label;
-      }, 1600);
-    });
+    const copied = await copy(target.textContent.trim());
+    if (!copied) {
+      select(target);
+    }
+    button.dataset.copied = String(copied);
+    button.textContent = copied ? "Copied" : "Press Ctrl+C";
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      button.dataset.copied = "false";
+      button.textContent = label;
+    }, 1600);
   });
 }
