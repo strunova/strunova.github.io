@@ -9,153 +9,364 @@
     />
     <meta
       name="description"
-      content="STRUNOVA, The Guitar Harmony Engine: a desktop application for finding, exploring and identifying guitar chords. In development."
+      content="STRUNOVA, The Guitar Harmony Engine: a desktop app for finding, hearing and identifying guitar chords, with a library where nothing is invented. Alpha for Linux."
     />
-    <meta name="theme-color" content="#101820" />
+    <meta name="theme-color" content="#100905" />
     <title>STRUNOVA · The Guitar Harmony Engine</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
-    <header class="hero">
-      <h1 class="title">STRUNOVA</h1>
-      <p class="tagline">The Guitar Harmony Engine</p>
-      <p class="lead">
-        A desktop application for finding, exploring and identifying guitar chords.
-      </p>
-      <div class="alert" role="alert">
-        <p>
-          <strong>STRUNOVA is in alpha and is not ready for everyday use yet.</strong> It
-          has the chord search, chord progressions to see and hear in time, chord
-          identification on a fretboard, chord diagrams with synthesized sound, and a library
-          of 269 chords: major, minor, power, suspended, sixth, seventh, ninth, thirteenth,
-          altered, diminished, augmented and slash chords.
-        </p>
-        <p>
-          If you have installed it, please uninstall it: installed copies do not receive
-          updates yet. Open the Software app, find STRUNOVA in the Installed tab and click
-          Uninstall, or run <code>sudo apt remove strunova</code> in a terminal.
-        </p>
-      </div>
-      <div class="hero-actions">
-        <a class="button" href="download/STRUNOVA_0.15.0_amd64.deb" download
-          >Download alpha 0.15.0 for Linux</a
-        >
-        <p class="hero-note">
-          Debian 13 · .deb · 3.4 MB · <a href="#download">How to install</a> · By
-          downloading, you agree to the <a href="terms.html">Terms of Use</a>.
-        </p>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="STRUNOVA, home">
+          <svg viewBox="64 64 896 896" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo-bg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22323d" />
+                <stop offset="1" stop-color="#0d141a" />
+              </linearGradient>
+              <radialGradient id="logo-glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#62cdbb" stop-opacity="0.55" />
+                <stop offset="1" stop-color="#62cdbb" stop-opacity="0" />
+              </radialGradient>
+              <radialGradient id="logo-star" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#ffffff" />
+                <stop offset="0.45" stop-color="#e9fffb" />
+                <stop offset="1" stop-color="#62cdbb" />
+              </radialGradient>
+            </defs>
+            <rect x="64" y="64" width="896" height="896" rx="208" fill="url(#logo-bg)" />
+            <rect x="67" y="67" width="890" height="890" rx="205" fill="none" stroke="#62cdbb" stroke-opacity="0.35" stroke-width="6" />
+            <g stroke="#aab8c5" stroke-opacity="0.5" stroke-linecap="round">
+              <line x1="352" y1="196" x2="352" y2="828" stroke-width="16" />
+              <line x1="416" y1="196" x2="416" y2="828" stroke-width="14" />
+              <line x1="480" y1="196" x2="480" y2="828" stroke-width="12" />
+              <line x1="544" y1="196" x2="544" y2="828" stroke-width="10" />
+              <line x1="608" y1="196" x2="608" y2="828" stroke-width="9" />
+              <line x1="672" y1="196" x2="672" y2="828" stroke-width="8" />
+            </g>
+            <circle cx="512" cy="512" r="330" fill="url(#logo-glow)" />
+            <path d="M 512 272 Q 550.4 473.6 752 512 Q 550.4 550.4 512 752 Q 473.6 550.4 272 512 Q 473.6 473.6 512 272 Z" fill="url(#logo-star)" />
+          </svg>
+          <span>STRUNOVA</span>
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="#features">Features</a>
+          <a href="#download">Download</a>
+          <a href="releases.html">What’s new</a>
+          <a href="terms.html">Terms</a>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section>
-        <h2>What STRUNOVA will offer</h2>
-        <p class="note">These features are planned and are being built step by step.</p>
-        <ul class="features">
-          <li>
-            <h3>Chord library</h3>
-            <p>
-              Search by name, such as C, Cm7, F#m9 or G7b9, and see every documented
-              voicing of the chord.
-            </p>
-          </li>
-          <li>
-            <h3>Fretboard diagrams</h3>
-            <p>Clear finger positions, open and muted strings, the root note and the chord tones.</p>
-          </li>
-          <li>
-            <h3>Build music</h3>
-            <p>
-              Write chords in your own order, see them and hear them in time, then play
-              along.
-            </p>
-          </li>
-          <li>
-            <h3>Listen</h3>
-            <p>Hear each voicing as a full chord or note by note.</p>
-          </li>
-          <li>
-            <h3>Reverse finder</h3>
-            <p>Select notes on the fretboard and find the matching chords in the library.</p>
-          </li>
-          <li>
-            <h3>Music theory</h3>
-            <p>Notes, intervals and formula for every chord in the library.</p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="principle">
-        <h2>No invented chords</h2>
-        <p>
-          STRUNOVA shows only chords and voicings that exist and are documented in its
-          library. If a chord is not there yet, the app says so instead of making one up.
+      <div class="hero wrap">
+        <p class="eyebrow">The Guitar Harmony Engine</p>
+        <h1>Find, hear and understand <span class="gold">guitar chords</span>.</h1>
+        <p class="lead">
+          STRUNOVA is a desktop app for finding, exploring and identifying guitar chords.
+          Every chord and every position comes from a checked library: nothing is made up.
         </p>
-      </section>
-
-      <section>
-        <h2>Privacy</h2>
-        <p>
-          Designed to work offline, with no accounts and no tracking. This website uses no
-          cookies and no analytics.
-        </p>
-      </section>
-
-      <section id="download" class="download">
-        <h2>Download</h2>
-        <p class="danger">
-          STRUNOVA 0.15.0 is an early alpha, not ready for everyday use yet: its library
-          holds 269 chords so far, and several features above are not available yet. Installed copies do not receive updates yet.
-        </p>
-        <p class="small">
-          New in 0.15.0: Lesson 1 is complete. Its last chapters explain the amplifier
-          and the effects pedals, show the whole sound path in an interactive diagram
-          for each kind of guitar, and end with a test of ten questions. Lesson 1 now
-          has ten chapters about the guitar and its sound. Since 0.10, a new
-          design in warm dark colors and gold, with motion in the manner of iOS and
-          macOS. The library has 269 chords with 459 voicings, each one checked by the
-          music engine.
+        <div class="actions">
+          <a class="button" href="download/STRUNOVA_0.15.0_amd64.deb" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" />
+            </svg>
+            Download alpha 0.15.0 for Linux
+          </a>
+          <a class="button quiet" href="releases.html">What’s new</a>
+        </div>
+        <p class="meta">
+          Debian 13 · .deb · 3.4&nbsp;MB · <span class="status">Tested on Debian 13</span> ·
+          By downloading, you agree to the <a href="terms.html">Terms of Use</a>.
         </p>
 
-        <div class="download-card">
-          <a class="button" href="download/STRUNOVA_0.15.0_amd64.deb" download
-            >Download for Linux (.deb)</a
-          >
-          <p class="file-info">
-            Version 0.15.0 alpha · Debian package · 64-bit (x86-64) · 3.4 MB
+        <div class="alert" role="alert">
+          <p>
+            <strong>STRUNOVA is in alpha and is not ready for everyday use yet.</strong>
+            Its interface is in Romanian for now.
           </p>
-          <p class="file-info">
-            By downloading, you agree to the <a href="terms.html">Terms of Use</a>.
+          <p>
+            If you have installed it, please uninstall it: installed copies do not receive
+            updates yet. Open the Software app, find STRUNOVA in the Installed tab and click
+            Uninstall, or run <code>sudo apt remove strunova</code> in a terminal.
           </p>
         </div>
 
-        <h3>Install</h3>
-        <p>
-          Open the downloaded file. The Software app opens: click <strong>Install</strong>
-          and enter your password. STRUNOVA then appears in your application menu. Tested
-          on Debian 13 (64-bit).
-        </p>
-        <p class="small">Or, in a terminal, in the folder where you saved the file:</p>
-        <pre><code>sudo apt install ./STRUNOVA_0.15.0_amd64.deb</code></pre>
-        <p class="small">
-          To remove STRUNOVA, uninstall it from the Software app, or run
-          <code>sudo apt remove strunova</code>. Your settings, favorites and lessons read stay in the folder
-          <code>~/.local/share/ro.strunova.desktop</code>; delete it to remove them too.
-        </p>
-        <p class="small">
-          Other Linux distributions based on Debian may work, but they have not been
-          tested. A Windows version is planned.
-        </p>
-        <p class="small">SHA-256: <code class="checksum">b1cb0c7be084cddbf6f1b9b1919f9de4cafd8838aec3b78d26d1bb8c1e246e50</code></p>
+        <figure class="shot glow reveal">
+          <img
+            src="images/chords.png"
+            width="1600"
+            height="900"
+            alt="The chord library of STRUNOVA: a table of chord types and roots, and the chosen chord C with its diagram, its notes and buttons to hear it."
+          />
+        </figure>
+
+        <ul class="stats reveal">
+          <li><strong class="gold">269</strong><span>chords in the library</span></li>
+          <li><strong class="gold">459</strong><span>documented positions</span></li>
+          <li><strong class="gold">25</strong><span>chord types, from major to 7♯9</span></li>
+          <li><strong class="gold">0</strong><span>invented chords</span></li>
+        </ul>
+      </div>
+
+      <section id="features">
+        <div class="wrap">
+          <div class="section-title reveal">
+            <p class="eyebrow">What the alpha does</p>
+            <h2>A chord library you can trust, and the tools around it</h2>
+            <p>
+              Search by name, such as C, Cm7, F#m9 or G7b9, or pick a chord from the table of
+              types and roots. Every documented position has a clear diagram, with the
+              fingers, the open and muted strings, the root and the notes, and you can hear
+              it strummed or string by string. Filters keep only the positions you want: by
+              level, open or barre, place on the neck and number of fingers.
+            </p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-text">
+              <span class="tag">Build music</span>
+              <h3>Write a progression, then play along</h3>
+              <p>
+                Type the chords in your own order, such as Em C G D, and see each one with a
+                diagram from the library. Hear the progression in time and follow the chord
+                that is playing.
+              </p>
+              <ul>
+                <li>Tempo from 40 to 200 beats per minute</li>
+                <li>From 1 to 8 beats per chord, with repeat on or off</li>
+                <li>Another position for any chord, with the arrows</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="images/progression.png" width="1600" height="900" loading="lazy" alt="Build music: the progression Em C G D, each chord with its diagram, and the controls for tempo, beats per chord, volume and repeat." />
+            </figure>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-text">
+              <span class="tag">Chord identification</span>
+              <h3>Which chord am I playing?</h3>
+              <p>
+                Choose one note per string on a fretboard, and STRUNOVA names the chords of its
+                library that have exactly those notes, and tells you whether your position is
+                one of its own.
+              </p>
+              <ul>
+                <li>A wooden fretboard with 12, 15 or 17 frets</li>
+                <li>An Example button that puts a position from the library on the neck</li>
+                <li>Chords with the same notes over another bass, named apart</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="images/identify.png" width="1600" height="900" loading="lazy" alt="Chord identification: notes chosen on a wooden fretboard, the chord C found in the library, and the notes chosen string by string." />
+            </figure>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-text">
+              <span class="tag">Lessons</span>
+              <h3>Learn how a guitar makes its sound</h3>
+              <p>
+                Lesson 1 explains, card by card, what sound is, how classical, acoustic,
+                electro-acoustic, smart and electric guitars make it, and how amplifiers and
+                effects shape it.
+              </p>
+              <ul>
+                <li>10 chapters, 74 cards and more than 40 drawings</li>
+                <li>Notes to hear, and an interactive map of the whole sound path</li>
+                <li>A test of ten questions, with your score</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="images/lesson.png" width="1600" height="900" loading="lazy" alt="A lesson card: the whole sound path of an electric guitar, stop by stop, from the string to the ear." />
+            </figure>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-text">
+              <span class="tag">Favorites and settings</span>
+              <h3>Your chords, your way</h3>
+              <p>
+                Star a chord to keep it with the exact position you were looking at, and find
+                your favorites as cards to see and hear. Settings are saved automatically.
+              </p>
+              <ul>
+                <li>The volume, kept from one session to the next</li>
+                <li>Sound as soon as you choose a note or a chord</li>
+                <li>The length of the fretboard and note names under the mouse</li>
+              </ul>
+            </div>
+            <figure class="shot">
+              <img src="images/favorites.png" width="1600" height="900" loading="lazy" alt="Favorites: the starred chords Am, C, G, Em and F7 as cards, each with its diagram and a button to hear it." />
+            </figure>
+          </div>
+
+          <ul class="cards reveal">
+            <li class="card">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" />
+                </svg>
+              </div>
+              <h3>Warm and focused</h3>
+              <p>A dark, warm design with a gold accent, made to let the chords stand out.</p>
+            </li>
+            <li class="card">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 12c2.5 0 2.5-6 5-6s2.5 12 5 12 2.5-6 5-6 2.5 0 3 0" />
+                </svg>
+              </div>
+              <h3>Motion like iOS and macOS</h3>
+              <p>
+                Buttons give way under a click, selections slide, sliders glide and fingers
+                move to the next position.
+              </p>
+            </li>
+            <li class="card">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 18V6l5 3v6l-5 3Z" />
+                  <path d="M14 8.5a5 5 0 0 1 0 7M17 6a8.5 8.5 0 0 1 0 12" />
+                </svg>
+              </div>
+              <h3>Synthesized strings</h3>
+              <p>
+                Plucked strings synthesized in the app, in tune to within a cent across the
+                neck. The app says so: no recordings pretend to be a real guitar.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="principle reveal">
+            <p class="eyebrow">Our principle</p>
+            <h2>No invented chords</h2>
+            <p>
+              STRUNOVA shows only chords and positions that exist and are documented in its
+              library. If a chord is not there yet, the app says so instead of making one up.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <ul class="cards reveal">
+            <li class="card">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="11" width="14" height="9" rx="2" />
+                  <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                </svg>
+              </div>
+              <h3>Private by design</h3>
+              <p>
+                The app works offline, with no account and no tracking. Your settings,
+                favorites and lessons read stay on your computer.
+              </p>
+            </li>
+            <li class="card">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h10" />
+                </svg>
+              </div>
+              <h3>No cookies here either</h3>
+              <p>This website uses no cookies and no analytics.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="download">
+        <div class="wrap">
+          <div class="section-title reveal">
+            <p class="eyebrow">Download</p>
+            <h2>Try the alpha</h2>
+            <p>
+              New in 0.15.0: Lesson 1 is complete. Its last chapters explain the amplifier and
+              the effects pedals, show the whole sound path in an interactive diagram for each
+              kind of guitar, and end with a test of ten questions.
+              <a href="releases.html">Every version</a>.
+            </p>
+          </div>
+
+          <div class="download reveal">
+            <div class="panel">
+              <h3>STRUNOVA 0.15.0 alpha</h3>
+              <p class="small">
+                Debian package · 64-bit (x86-64) · 3.4&nbsp;MB ·
+                <span class="status">Tested on Debian 13</span>
+              </p>
+              <a class="button" href="download/STRUNOVA_0.15.0_amd64.deb" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" />
+                </svg>
+                Download for Linux (.deb)
+              </a>
+              <p class="small">
+                By downloading, you agree to the <a href="terms.html">Terms of Use</a>.
+              </p>
+              <p>
+                STRUNOVA 0.15.0 is an early alpha, not ready for everyday use yet. Installed
+                copies do not receive updates yet: each new version is offered on this page.
+              </p>
+              <p class="small">SHA-256 of the package:</p>
+              <div class="code">
+                <code id="checksum">b1cb0c7be084cddbf6f1b9b1919f9de4cafd8838aec3b78d26d1bb8c1e246e50</code>
+                <button class="copy" type="button" data-copy="checksum">Copy</button>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Install</h3>
+              <ol class="steps">
+                <li>Open the downloaded file: the Software app opens.</li>
+                <li>Click <strong>Install</strong> and enter your password.</li>
+                <li>STRUNOVA appears in your application menu. Tested on Debian 13 (64-bit).</li>
+              </ol>
+              <p class="small">Or, in a terminal, in the folder where you saved the file:</p>
+              <div class="code">
+                <code id="install">sudo apt install ./STRUNOVA_0.15.0_amd64.deb</code>
+                <button class="copy" type="button" data-copy="install">Copy</button>
+              </div>
+              <p class="small">
+                To remove STRUNOVA, uninstall it from the Software app, or run
+                <code>sudo apt remove strunova</code>. Your settings, favorites and lessons
+                read stay in the folder <code>~/.local/share/ro.strunova.desktop</code>;
+                delete it to remove them too.
+              </p>
+              <p class="small">
+                Other Linux distributions based on Debian may work, but they have not been
+                tested. A Windows version is planned.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>
-        © 2026 themasterofbuttons. All rights reserved. ·
-        <a href="terms.html">Terms of Use</a>
-      </p>
+      <div class="wrap">
+        <p>© 2026 themasterofbuttons. All rights reserved.</p>
+        <p>
+          <a href="releases.html">What’s new</a> · <a href="terms.html">Terms of Use</a> ·
+          Fonts under the SIL Open Font License:
+          <a href="fonts/LICENSE-space-grotesk.txt">Space Grotesk</a>,
+          <a href="fonts/LICENSE-dm-sans.txt">DM Sans</a>,
+          <a href="fonts/LICENSE-space-mono.txt">Space Mono</a>
+        </p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

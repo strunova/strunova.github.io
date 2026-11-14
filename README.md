@@ -4,7 +4,7 @@ Source of the official STRUNOVA website: https://strunova.github.io
 
 STRUNOVA, The Guitar Harmony Engine, is a desktop application for finding, exploring and identifying guitar chords.
 
-The site is plain HTML and CSS, published by GitHub Pages from the `main` branch.
+The site is plain HTML and CSS, with one small script (`script.js`) for sections that rise into view and copy buttons; it works without it. It is published by GitHub Pages from the `main` branch. It follows the theme of the desktop app: the same colors and the same fonts, bundled in `fonts/` with their licenses. The screenshots in `images/` are taken from the app.
 
 When `styles.css` changes, increase the `?v=` number in the stylesheet link of `index.html` and `terms.html`. Browsers keep a copy of the stylesheet for up to ten minutes; the new number makes them download the new file together with the page.
 

@@ -8,15 +8,56 @@
       content="default-src 'self'; base-uri 'none'; form-action 'none'"
     />
     <meta name="description" content="Terms of use for the STRUNOVA application." />
-    <meta name="theme-color" content="#101820" />
+    <meta name="theme-color" content="#100905" />
     <title>Terms of Use · STRUNOVA</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
-    <main class="legal">
-      <p><a href="./">← STRUNOVA</a></p>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="STRUNOVA, home">
+          <svg viewBox="64 64 896 896" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo-bg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22323d" />
+                <stop offset="1" stop-color="#0d141a" />
+              </linearGradient>
+              <radialGradient id="logo-glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#62cdbb" stop-opacity="0.55" />
+                <stop offset="1" stop-color="#62cdbb" stop-opacity="0" />
+              </radialGradient>
+              <radialGradient id="logo-star" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#ffffff" />
+                <stop offset="0.45" stop-color="#e9fffb" />
+                <stop offset="1" stop-color="#62cdbb" />
+              </radialGradient>
+            </defs>
+            <rect x="64" y="64" width="896" height="896" rx="208" fill="url(#logo-bg)" />
+            <rect x="67" y="67" width="890" height="890" rx="205" fill="none" stroke="#62cdbb" stroke-opacity="0.35" stroke-width="6" />
+            <g stroke="#aab8c5" stroke-opacity="0.5" stroke-linecap="round">
+              <line x1="352" y1="196" x2="352" y2="828" stroke-width="16" />
+              <line x1="416" y1="196" x2="416" y2="828" stroke-width="14" />
+              <line x1="480" y1="196" x2="480" y2="828" stroke-width="12" />
+              <line x1="544" y1="196" x2="544" y2="828" stroke-width="10" />
+              <line x1="608" y1="196" x2="608" y2="828" stroke-width="9" />
+              <line x1="672" y1="196" x2="672" y2="828" stroke-width="8" />
+            </g>
+            <circle cx="512" cy="512" r="330" fill="url(#logo-glow)" />
+            <path d="M 512 272 Q 550.4 473.6 752 512 Q 550.4 550.4 512 752 Q 473.6 550.4 272 512 Q 473.6 473.6 512 272 Z" fill="url(#logo-star)" />
+          </svg>
+          <span>STRUNOVA</span>
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="#features">Features</a>
+          <a href="#download">Download</a>
+          <a href="releases.html">What’s new</a>
+          <a href="terms.html" aria-current="page">Terms</a>
+        </nav>
+      </div>
+    </header>
 
+    <main class="wrap legal">
       <h1>STRUNOVA Terms of Use</h1>
       <p>
         These terms apply to the STRUNOVA application (“the app”) in its alpha versions,
@@ -72,7 +113,18 @@
     </main>
 
     <footer>
-      <p>© 2026 themasterofbuttons. All rights reserved.</p>
+      <div class="wrap">
+        <p>© 2026 themasterofbuttons. All rights reserved.</p>
+        <p>
+          <a href="releases.html">What’s new</a> · <a href="terms.html">Terms of Use</a> ·
+          Fonts under the SIL Open Font License:
+          <a href="fonts/LICENSE-space-grotesk.txt">Space Grotesk</a>,
+          <a href="fonts/LICENSE-dm-sans.txt">DM Sans</a>,
+          <a href="fonts/LICENSE-space-mono.txt">Space Mono</a>
+        </p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
