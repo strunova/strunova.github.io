@@ -317,6 +317,7 @@ pre {
   margin: 0 auto;
   font-size: clamp(2.5rem, 6vw, 4.25rem);
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .gold {
@@ -776,6 +777,108 @@ html:not(.js) .copy {
 .latest {
   margin-left: 0.5rem;
   vertical-align: middle;
+}
+
+/* Roadmap: the phases on one line, from the first to the launch. */
+
+.phases {
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* The line that joins the phases. */
+.phases::before {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 3rem;
+  left: calc(0.75rem - 1px);
+  width: 2px;
+  background: linear-gradient(var(--accent) 0%, var(--accent) 72%, var(--border) 100%);
+  content: "";
+}
+
+.phase {
+  position: relative;
+  padding: 0 0 2.75rem 3.25rem;
+}
+
+/* The dot of a phase: full when done, glowing while in progress, empty when planned. */
+.phase::before {
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background-color: var(--accent);
+  content: "";
+}
+
+.phase[data-state="now"]::before {
+  background-color: var(--bg);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.phase[data-state="next"]::before {
+  border-color: var(--text-faint);
+  background-color: var(--bg);
+}
+
+/* The status sits after the name, or under it, at the left, on a narrow screen. */
+.phase h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  font-size: 1.5rem;
+}
+
+.status.now {
+  background-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--text);
+}
+
+.status.next {
+  background-color: var(--surface-active);
+  color: var(--text-muted);
+}
+
+.phase p {
+  margin-top: 0.6rem;
+  color: #cfc6b9;
+}
+
+.phase h3 {
+  margin-top: 1.25rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* A list inside a list would get hollow markers; these stay full. */
+.phase ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  color: #cfc6b9;
+  list-style: disc;
+}
+
+.phase .done li::marker {
+  color: var(--accent);
+}
+
+.phase .next li::marker {
+  color: var(--text-faint);
 }
 
 /* Terms */

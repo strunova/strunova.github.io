@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="description" content="The STRUNOVA roadmap: what is done, what is being built and what comes next." />
+    <meta name="theme-color" content="#100905" />
+    <title>Roadmap · STRUNOVA</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="STRUNOVA, home">
+          <svg viewBox="64 64 896 896" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo-bg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22323d" />
+                <stop offset="1" stop-color="#0d141a" />
+              </linearGradient>
+              <radialGradient id="logo-glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#62cdbb" stop-opacity="0.55" />
+                <stop offset="1" stop-color="#62cdbb" stop-opacity="0" />
+              </radialGradient>
+              <radialGradient id="logo-star" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#ffffff" />
+                <stop offset="0.45" stop-color="#e9fffb" />
+                <stop offset="1" stop-color="#62cdbb" />
+              </radialGradient>
+            </defs>
+            <rect x="64" y="64" width="896" height="896" rx="208" fill="url(#logo-bg)" />
+            <rect x="67" y="67" width="890" height="890" rx="205" fill="none" stroke="#62cdbb" stroke-opacity="0.35" stroke-width="6" />
+            <g stroke="#aab8c5" stroke-opacity="0.5" stroke-linecap="round">
+              <line x1="352" y1="196" x2="352" y2="828" stroke-width="16" />
+              <line x1="416" y1="196" x2="416" y2="828" stroke-width="14" />
+              <line x1="480" y1="196" x2="480" y2="828" stroke-width="12" />
+              <line x1="544" y1="196" x2="544" y2="828" stroke-width="10" />
+              <line x1="608" y1="196" x2="608" y2="828" stroke-width="9" />
+              <line x1="672" y1="196" x2="672" y2="828" stroke-width="8" />
+            </g>
+            <circle cx="512" cy="512" r="330" fill="url(#logo-glow)" />
+            <path d="M 512 272 Q 550.4 473.6 752 512 Q 550.4 550.4 512 752 Q 473.6 550.4 272 512 Q 473.6 473.6 512 272 Z" fill="url(#logo-star)" />
+          </svg>
+          <span>STRUNOVA</span>
+        </a>
+        <nav class="nav" aria-label="Site">
+          <a href="./#features">Features</a>
+          <a href="./#download">Download</a>
+          <a href="releases.html">What’s new</a>
+          <a href="roadmap.html" aria-current="page">Roadmap</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="hero">
+        <p class="eyebrow">Roadmap</p>
+        <h1>Where <span class="gold">STRUNOVA</span> is going</h1>
+        <p class="lead">
+          STRUNOVA is built in phases, and each one is tested before the next begins. Here
+          is what is done, what is being built now and what comes next.
+        </p>
+        <p class="meta">
+          Updated on 2026-11-15. Every finished version is in
+          <a href="releases.html">What’s new</a>.
+        </p>
+      </div>
+
+      <ol class="phases">
+        <li class="phase reveal" data-state="done">
+          <h2>Foundation <span class="status">Done</span></h2>
+          <p>
+            The STRUNOVA window and its sections, the icon, a strict security setup, and
+            automatic checks that test the app at every change.
+          </p>
+        </li>
+
+        <li class="phase reveal" data-state="done">
+          <h2>A chord library you can trust <span class="status">Done</span></h2>
+          <p>
+            Documented chords, every position checked by the app’s music engine. Search by
+            name, with other names and enharmonic spellings, and a clear message when a
+            chord is not in the library: nothing is made up.
+          </p>
+        </li>
+
+        <li class="phase reveal" data-state="done">
+          <h2>Chord diagrams <span class="status">Done</span></h2>
+          <p>
+            A clear diagram for every position: fingers, barres, open and muted strings,
+            the root and the notes.
+          </p>
+        </li>
+
+        <li class="phase reveal" data-state="done">
+          <h2>Sound <span class="status">Done</span></h2>
+          <p>
+            Plucked strings synthesized in the app, in tune to within a cent: hear every
+            position strummed or string by string.
+          </p>
+        </li>
+
+        <li class="phase reveal" data-state="now">
+          <h2>Advanced features <span class="status now">In progress</span></h2>
+          <p>The tools around the library, one version at a time.</p>
+          <h3>Done</h3>
+          <ul class="done">
+            <li>Chord identification: choose notes on a fretboard and find their chord.</li>
+            <li>A library of 269 chords and 459 positions, from power chords to altered ninths.</li>
+            <li>Build music: write a progression, then hear it in time.</li>
+            <li>Filters for the positions of a chord.</li>
+            <li>A new design, with motion in the manner of iOS and macOS.</li>
+            <li>Settings and favorite chords, kept on your computer.</li>
+            <li>Lesson 1: the guitar and its sound.</li>
+            <li>The theory of every chord: formula, intervals, bass and an explanation.</li>
+          </ul>
+          <h3>Next</h3>
+          <ul class="next">
+            <li>The Grif section, which the app already lists.</li>
+            <li>More chords and positions in the library.</li>
+            <li>Guitars with 7 and 8 strings.</li>
+            <li>Every position of the library played on a guitar, not only checked.</li>
+          </ul>
+        </li>
+
+        <li class="phase reveal" data-state="done">
+          <h2>The website <span class="status">Done</span></h2>
+          <p>
+            This website: the features with real screenshots, the download with its
+            checksum, the release notes and this roadmap.
+          </p>
+        </li>
+
+        <li class="phase reveal" data-state="next">
+          <h2>Testing and launch <span class="status next">Planned</span></h2>
+          <p>The road from the alpha to the first full version.</p>
+          <ul class="next">
+            <li>Testing the whole app: its musical data, its speed and its security.</li>
+            <li>Easier updates, without downloading every version by hand.</li>
+            <li>More lessons.</li>
+            <li>A Windows version.</li>
+            <li>The final documentation, and the launch.</li>
+          </ul>
+        </li>
+      </ol>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>© 2026 themasterofbuttons. All rights reserved.</p>
+        <p>
+          <a href="releases.html">What’s new</a> · <a href="roadmap.html">Roadmap</a> ·
+          <a href="terms.html">Terms of Use</a> ·
+          Fonts under the SIL Open Font License:
+          <a href="fonts/LICENSE-space-grotesk.txt">Space Grotesk</a>,
+          <a href="fonts/LICENSE-dm-sans.txt">DM Sans</a>,
+          <a href="fonts/LICENSE-space-mono.txt">Space Mono</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
